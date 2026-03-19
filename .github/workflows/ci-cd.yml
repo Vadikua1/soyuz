@@ -7,22 +7,24 @@ on:
 
 jobs:
   build-and-test:
-    runs-on: ubuntu-latest # Щиро ненавиджу убунту, але гітхаб чорти на ньому
+    runs-on: ubuntu-latest
     steps:
-      - [cite_start]uses: actions/checkout@v4 # Отримання коду
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          [cite_start]node-version: 20 # Стабільна версія
+          node-version: 20
       
       - name: Install dependencies
-        [cite_start]run: npm ci # Чисте встановлення
+        run: npm ci
 
       - name: Run linter
-        [cite_start]run: npm run lint # Перевірка гігієни
+        run: npm run lint
 
       - name: Run unit tests
-        [cite_start]run: npm run test:unit # Перевірка логіки
+        run: npm run test:unit
 
       - name: Build project
-        [cite_start]run: npm run build # Збірка артефакту
+        run: npm run build
