@@ -1,7 +1,20 @@
-# Vue 3 + Vite
-
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
-
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+# 📦 Проєкт SOYUZ — Склад Соєвої Продукції
 
 [![CI/CD Pipeline](https://github.com/Vadikua1/soyuz/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/Vadikua1/soyuz/actions/workflows/ci-cd.yml)
+[![Deployed on Vercel](https://img.shields.io/badge/Vercel-000000?style=flat&logo=vercel&logoColor=white)](Тут_твоє_посилання_на_сайт_vercel)
+
+**MVP проєкт для автоматизованого управління складом соєвої продукції.** Створено в межах вивчення курсу «Управління IT-проєктами» у Львівській політехніці.
+
+---
+
+## 🚀 Live Demo
+Подивитися на працюючу версію складу сої можна тут:  
+🔗 https://soyuzw.vercel.app
+
+---
+
+## 🛠 Технологічний стек
+* **Frontend:** Vue.js + Vite
+* **CI/CD:** GitHub Actions
+* **Hosting:** Vercel [cite: 73]
+* **OS Environment:** Debian (local dev) / Ubuntu (CI runner)
