@@ -1,0 +1,28 @@
+name: CI/CD Pipeline
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest # Щиро ненавиджу убунту, але гітхаб чорти на ньому
+    steps:
+      - [cite_start]uses: actions/checkout@v4 # Отримання коду
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          [cite_start]node-version: 20 # Стабільна версія
+      
+      - name: Install dependencies
+        [cite_start]run: npm ci # Чисте встановлення
+
+      - name: Run linter
+        [cite_start]run: npm run lint # Перевірка гігієни
+
+      - name: Run unit tests
+        [cite_start]run: npm run test:unit # Перевірка логіки
+
+      - name: Build project
+        [cite_start]run: npm run build # Збірка артефакту
